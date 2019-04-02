@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Executar apos a instalação limpa do Debian 9 stretch
+# Executar apos a instalação limpa do Debian 9 stretch amd64
 
 apt update
 apt install -y xorg i3 \ # interface grafica i3wm
@@ -12,12 +12,16 @@ apt install -y xorg i3 \ # interface grafica i3wm
                feh \ #suporte a papel de parede
                dirmngr \ #necessario para adicionar chaves no source.list
                sudo \ #permite o uso do sudo
-               git \ #necessario para baixar conteudo do github
                wget \ #necessario se necessario baixar algum arquivo
                thunar \ #gerenciador de arquivo
                geany \ #editor de texto
                conky \ #conky
+               make
 dpkg --add-architecture i386 #Necessario para instalação da Steam
+
+dpkg -i libc++abi1-7_7.0.1-8_amd64.deb #Necessario para Discord
+dpkg -i libc++1-7_7.0.1-8_amd64.deb #Necessario para Discord
+dpkg -i libc++1_7.0-47.1_amd64.deb #Necessario para Discord
 
 #Adicionando Repositórios
 sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' #Necessario para instalação do Google Chrome
@@ -43,5 +47,7 @@ apt update
 #need package spotify
 apt install google-chrome-stable spotify-client steam
 
-git clone #address
+#git clone #address
 sh installTermite.sh
+
+
