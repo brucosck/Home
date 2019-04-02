@@ -14,6 +14,9 @@ apt install -y xorg i3 \ # interface grafica i3wm
                sudo \ #permite o uso do sudo
                git \ #necessario para baixar conteudo do github
                wget \ #necessario se necessario baixar algum arquivo
+               thunar \ #gerenciador de arquivo
+               geany \ #editor de texto
+               conky \ #conky
 dpkg --add-architecture i386 #Necessario para instalação da Steam
 
 #Adicionando Repositórios
@@ -39,3 +42,6 @@ apt update
 
 #need package spotify
 apt install google-chrome-stable spotify-client steam
+
+git clone #address
+sh installTermite.sh
