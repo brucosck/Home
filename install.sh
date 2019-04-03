@@ -3,20 +3,7 @@
 # Executar apos a instalação limpa do Debian 9 stretch amd64
 
 apt update
-apt install -y xorg i3 \ 
-               slim \ 
-               alsautils pavucontrol pulseaudio-utils \
-               dunst libnotify-bin \ 
-               rofi \ 
-               curlftpfs \ 
-               feh \ 
-               dirmngr \ 
-               sudo \ 
-               wget \ 
-               thunar \ 
-               geany \ 
-               conky \ 
-               make
+apt install -y xorg i3 slim alsautils pavucontrol pulseaudio-utils dunst libnotify-bin rofi curlftpfs feh dirmngr sudo wget thunar conky make
 dpkg --add-architecture i386 
 
 dpkg -i libc++abi1-7_7.0.1-8_amd64.deb 
