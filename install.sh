@@ -3,32 +3,34 @@
 # Executar apos a instalação limpa do Debian 9 stretch amd64
 
 apt update
-apt install -y xorg i3 \ #interface grafica i3wm
-               slim \ #gerenciador de Login
-               alsautils pavucontrol pulseaudio-utils \ #audo para a placa de som CA0108/CA10300 | Sound Blaster Audigy Series SB0610
-               dunst libnotify-bin \ #sistema de notificação.
-               rofi \ #Lançador
-               curlftpfs \ #ftp como diretório do sistema
-               feh \ #suporte a papel de parede
-               dirmngr \ #necessario para adicionar chaves no source.list
-               sudo \ #permite o uso do sudo
-               wget \ #necessario se necessario baixar algum arquivo
-               thunar \ #gerenciador de arquivo
-               geany \ #editor de texto
-               conky \ #conky
+apt install -y xorg i3 \ 
+               slim \ 
+               alsautils pavucontrol pulseaudio-utils \
+               dunst libnotify-bin \ 
+               rofi \ 
+               curlftpfs \ 
+               feh \ 
+               dirmngr \ 
+               sudo \ 
+               wget \ 
+               thunar \ 
+               geany \ 
+               conky \ 
                make
-dpkg --add-architecture i386 #Necessario para instalação da Steam
+dpkg --add-architecture i386 
 
-dpkg -i libc++abi1-7_7.0.1-8_amd64.deb #Necessario para Discord
-dpkg -i libc++1-7_7.0.1-8_amd64.deb #Necessario para Discord
-dpkg -i libc++1_7.0-47.1_amd64.deb #Necessario para Discord
+dpkg -i libc++abi1-7_7.0.1-8_amd64.deb 
+dpkg -i libc++1-7_7.0.1-8_amd64.deb 
+dpkg -i libc++1_7.0-47.1_amd64.deb 
 
 #Adicionando Repositórios
-sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' #Necessario para instalação do Google Chrome
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - #Necessario para instalação do Google Chrome
+#Necessario para instalação do Google Chrome
+sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' 
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87FF9DF48BF1C90 #Necessario para intalação spotify
-echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list #Necessario para instalação spotify
+#Necessario para intalação spotify
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87FF9DF48BF1C90 
+echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list 
 
 #ATENÇÃO Necessario para instalação da steam
 #aqui o script adiciona 'contrib' e 'non-free' as fontes correspondentes abaixo.
