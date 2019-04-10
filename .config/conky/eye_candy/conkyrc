@@ -1,0 +1,40 @@
+
+alignment top_left
+default_color ffffff
+double_buffer yes
+draw_outline no
+draw_shades no
+gap_x 7
+gap_y 832
+border_inner_margin 5		#Edit this#
+minimum_size 1024 0
+net_avg_samples 2
+no_buffers yes
+override_utf8_locale yes
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_colour 000000
+#own_window_type desktop
+own_window_type override
+#own_window_type normal
+own_window yes
+pad_percents 2
+cpu_avg_samples 2
+short_units yes
+text_buffer_size 800
+total_run_times 0
+update_interval 1.0
+use_spacer right
+use_xft yes
+xftfont  Birch Std:pixelsize=25
+
+TEXT
+
+${GOTO 155}${font steiner -U:size=23}${time %l:%M}${GOTO 410}CPU/RAM${GOTO 740}Network
+${GOTO 410}${color 000000}${cpugraph 20, 115 000000 ffffff}$color${font}  $cpu%${GOTO 739}${color 000000}${upspeedgraph enp5s0 20,90 000000 ffffff}$color ${upspeed enp5s0}/s${GOTO 850}
+${GOTO 410}${color 000000}${memgraph 20, 115 000000 ffffff}$color  $memperc%${GOTO 739}${color 000000}${downspeedgraph enp5s0 20,90 000000 ffffff}$color ${downspeed enp5s0}/s${GOTO 850}
+${voffset -45}${GOTO 155}${time %A,}
+${GOTO 155}${time Date %d %B}
