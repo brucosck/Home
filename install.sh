@@ -3,12 +3,14 @@
 # Executar apos a instalação limpa do Debian 9 stretch amd64
 
 apt update
-apt install -y xorg i3 slim alsa-utils pavucontrol pulseaudio-utils dunst libnotify-bin rofi curlftpfs feh dirmngr sudo thunar conky make
+apt install -y xorg i3 slim alsa-utils pavucontrol pulseaudio-utils dunst libnotify-bin rofi curlftpfs feh sudo conky make dirmngr
+
+#necessario para instalação steam
 dpkg --add-architecture i386 
 
-dpkg -i libc++abi1-7_7.0.1-8_amd64.deb 
-dpkg -i libc++1-7_7.0.1-8_amd64.deb 
-dpkg -i libc++1_7.0-47.1_amd64.deb 
+#dpkg -i libc++abi1-7_7.0.1-8_amd64.deb 
+#dpkg -i libc++1-7_7.0.1-8_amd64.deb 
+#dpkg -i libc++1_7.0-47.1_amd64.deb 
 
 #Adicionando Repositórios
 #Necessario para instalação do Google Chrome
@@ -23,20 +25,20 @@ echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.li
 #aqui o script adiciona 'contrib' e 'non-free' as fontes correspondentes abaixo.
 #caso vc utilize outras fontes devera adicionar manualmente.
 
+#mudanças necessarias para instalar steam
 #deb http://ftp.br.debian.org/debian/ stretch main contrib non-free
 #deb http://security.debian.org/debian-security stretch/updates main contrib non-free
 #deb http://ftp.br.debian.org/debian/ stretch-updates main contrib non-free
-sed -i "s/deb http:/\/\ftp.br.debian.org/\debian/\ stretch main/deb http:/\/\ftp.br.debian.org/\debian/\ stretch main contrib non-free/g" /etc/apt/sources.list
-sed -i "s/deb http:/\/\security.debian.org/\debian-security stretch/\updates main/deb http:/\/\security.debian.org/\debian-security stretch/\updates main contrib non-free/g" /etc/apt/sources.list
-sed -i "s/deb http:/\/\ftp.br.debian.org/\debian/\ stretch-updates main/deb http:/\/\ftp.br.debian.org/\debian/\ stretch-updates main contrib non-free/g" /etc/apt/sources.list
-
+#sed -i "s/deb http:/\/\ftp.br.debian.org/\debian/\ stretch main/deb http:/\/\ftp.br.debian.org/\debian/\ stretch main contrib non-free/g" /etc/apt/sources.list
+#sed -i "s/deb http:/\/\security.debian.org/\debian-security stretch/\updates main/deb http:/\/\security.debian.org/\debian-security stretch/\updates main contrib non-free/g" /etc/apt/sources.list
+#sed -i "s/deb http:/\/\ftp.br.debian.org/\debian/\ stretch-updates main/deb http:/\/\ftp.br.debian.org/\debian/\ stretch-updates main contrib non-free/g" /etc/apt/sources.list
 
 apt update
 
 #need package spotify
-apt install google-chrome-stable spotify-client steam
+apt install google-chrome-stable spotify-client
 
 #git clone #address
-sh installTermite.sh
+#sh installTermite.sh
 
 
