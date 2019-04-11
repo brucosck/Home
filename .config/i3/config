@@ -242,6 +242,9 @@ bindsym --release Control+Print exec scrot -s '%Y-%m-%d_%H.%M.%S_$wx$h.png' -s -
 #nautilus
 bindsym $mod+e exec nautilus
 
+#ranger
+#bindsym $mod+e exec i3-sensible-terminal -e ranger
+
 #System monitor
 bindsym Control+Mod1+Delete exec gnome-system-monitor
 
@@ -265,7 +268,7 @@ bindsym $mod+End exec sh ~/.config/scripts/menuShutDown.sh
 
 #lockscreen
 #bindsym $mod+l exec i3lock -t -i ~/Imagens/wallpaper/pickerick.png
-
+#------------------------------------------------------------------------------
 
 #Multimedia--------------------------------------------------------------------
 #change volume
