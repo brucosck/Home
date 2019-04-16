@@ -5,4 +5,6 @@ deb http://ftp.br.debian.org/debian/ stretch-updates main contrib non-free" > /e
 
 dpkg --add-architecture i386
 
-apt update && apt install steam
+apt update 
+
+apt install steam
