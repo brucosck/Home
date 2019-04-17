@@ -5,4 +5,4 @@
 dpkg --add-architecture i386
 
 apt update
-apt install -y xorg i3 slim alsa-utils pavucontrol pulseaudio-utils dunst libnotify-bin rofi curlftpfs feh sudo conky make dirmngr
+apt install -y xorg i3 slim alsa-utils pavucontrol pulseaudio-utils dunst libnotify-bin rofi curlftpfs feh sudo conky make dirmngr zip
